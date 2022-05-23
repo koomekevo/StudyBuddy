@@ -15,7 +15,5 @@ jobs:
         uses: sunnysid3up/python-linter@master
         with:
           source: "src"
-          mypy-options: false
           pylint-options: "--rcfile=setup.cfg"
-          isort-options: false
           django: true
