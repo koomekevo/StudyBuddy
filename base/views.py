@@ -40,7 +40,6 @@ def loginPage(request):
         else:
             messages.error(request, 'Username OR password does not exist')
 
-
     context = {'page': page}
     return render(request, 'base/login_register.html', context)
 
@@ -90,7 +89,6 @@ def room(request, pk):
             body=request.POST.get('body')
         )
         return redirect('room', pk=room.id)
-
 
     context = {'room': room, 'room_messages': room_messages}
     return render(request, 'base/room.html', context)
