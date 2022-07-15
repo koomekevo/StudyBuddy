@@ -137,12 +137,12 @@ def deleteRoom(request, pk):
 
 @login_required(login_url='login')
 def deleteMessage(request, pk):
-    room = Room.objects.get(id=pk)
+    message = Message.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != message.user:
         return HttpResponse('You are not allowed here!!')
 
     if request.method == 'POST':
-        room.delete()
+        message.delete()
         return redirect('home')
-    return render(request, 'base/delete.html', {'obj':room})
+    return render(request, 'base/delete.html', {'obj': message})
