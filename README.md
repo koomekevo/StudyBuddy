@@ -9,6 +9,10 @@ StudyBuddy is a Python Django project aimed to mimick the features of Discord Ap
 Run `git clone https://github.com/koomekevo/StudyBuddy.git` into your local computer
 
 Run `cd StudyBuddy` to change to project folder
+
+Run `python3 venv env` then `source env/bin/activate`
+
+Run `pip install -r requirements.txt`.
 ## Authors
 
 👤 **Kevin Koome**
